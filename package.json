@@ -1,0 +1,56 @@
+{
+  "name": "n8n-nodes-dudoxx",
+  "version": "0.1.0",
+  "description": "n8n community nodes for Dudoxx services",
+  "keywords": [
+    "n8n-community-node-package",
+    "dudoxx"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/your-github-username/n8n-nodes-dudoxx",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@example.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-github-username/n8n-nodes-dudoxx.git"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && gulp build",
+    "dev": "tsc --watch",
+    "format": "prettier --write nodes credentials",
+    "lint": "eslint nodes credentials --ext .js,.ts",
+    "lint:fix": "eslint nodes credentials --ext .js,.ts --fix",
+    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials --ext .js,.ts"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AssemblyAiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AssemblyAiTranscriber/AssemblyAiTranscriber.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.0",
+    "@typescript-eslint/eslint-plugin": "^8.28.0",
+    "@typescript-eslint/parser": "^8.28.0",
+    "eslint": "^9.23.0",
+    "eslint-config-prettier": "^10.1.1",
+    "eslint-plugin-prettier": "^5.2.5",
+    "fs-extra": "^11.3.0",
+    "gulp": "^5.0.0",
+    "n8n-workflow": "^1.82.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "assemblyai": "^4.9.0"
+  }
+}
