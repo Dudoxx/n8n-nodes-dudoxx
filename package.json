@@ -1,20 +1,24 @@
 {
   "name": "n8n-nodes-dudoxx",
   "version": "0.1.0",
-  "description": "n8n community nodes for Dudoxx services",
+  "description": "n8n community node package for interacting with the AssemblyAI API for speech-to-text transcription",
   "keywords": [
     "n8n-community-node-package",
-    "dudoxx"
+    "dudoxx",
+    "assemblyai",
+    "transcription",
+    "speech-to-text",
+    "audio"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/your-github-username/n8n-nodes-dudoxx",
+  "homepage": "https://github.com/dudoxx/n8n-nodes-dudoxx",
   "author": {
-    "name": "Your Name",
-    "email": "your.email@example.com"
+    "name": "DUDOXX Team",
+    "email": "contact@dudoxx.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-github-username/n8n-nodes-dudoxx.git"
+    "url": "git+https://github.com/dudoxx/n8n-nodes-dudoxx.git"
   },
   "main": "dist/index.js",
   "scripts": {
@@ -23,7 +27,8 @@
     "format": "prettier --write nodes credentials",
     "lint": "eslint nodes credentials --ext .js,.ts",
     "lint:fix": "eslint nodes credentials --ext .js,.ts --fix",
-    "prepublishOnly": "npm run build && npm run lint -c .eslintrc.prepublish.js nodes credentials --ext .js,.ts"
+    "lintpublish": "eslint -c .eslintrc.prepublish.js nodes credentials --ext .js,.ts",
+    "prepublishOnly": "npm run build && npm run lintpublish"
   },
   "files": [
     "dist"
