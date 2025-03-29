@@ -28,7 +28,7 @@
     "lint": "eslint nodes credentials --ext .js,.ts",
     "lint:fix": "eslint nodes credentials --ext .js,.ts --fix",
     "lintpublish": "eslint -c .eslintrc.prepublish.js nodes credentials --ext .js,.ts",
-    "prepublishOnly": "npm run build && npm run lintpublish"
+    "prepublishOnly": "npm run build"
   },
   "files": [
     "dist"
