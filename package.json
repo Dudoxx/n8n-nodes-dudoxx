@@ -20,14 +20,19 @@
     "type": "git",
     "url": "git+https://github.com/dudoxx/n8n-nodes-dudoxx.git"
   },
+  "bugs": {
+    "url": "https://github.com/dudoxx/n8n-nodes-dudoxx/issues"
+  },
+  "engines": {
+    "node": ">=18.10"
+  },
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc && gulp build",
     "dev": "tsc --watch",
     "format": "prettier --write nodes credentials",
-    "lint": "eslint nodes credentials --ext .js,.ts",
-    "lint:fix": "eslint nodes credentials --ext .js,.ts --fix",
-    "lintpublish": "eslint -c .eslintrc.prepublish.js nodes credentials --ext .js,.ts",
+    "lint": "eslint nodes credentials package.json",
+    "lint:fix": "eslint nodes credentials package.json --fix",
     "prepublishOnly": "npm run build"
   },
   "files": [
